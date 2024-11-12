@@ -1,0 +1,27 @@
+.group {
+  position: relative;
+
+  &:focus-within {
+    .label {
+      top: 0;
+      font-size: 0.7rem;
+    }
+  }
+
+  input {
+    &:not(:placeholder-shown) + .label,
+    &:focus + .label {
+      top: 0;
+      font-size: 0.7rem;
+    }
+  }
+
+  .label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 0.9rem;
+    transition: all 0.2s ease-in-out;
+  }
+}
